@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie">
-    <Prefix name="" IRI="http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -26,16 +26,22 @@
         <Class IRI="#Récompense"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Parolier"/>
+        <Class IRI="#Classique"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Classique"/>
+        <Class IRI="#Parolier"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Chanson"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#GroupeDeMusique"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aReçu"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Pop"/>
@@ -47,16 +53,19 @@
         <Class IRI="#Hip-Hop"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#estReçu"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Musicien"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#estMembre"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Interprete"/>
+        <Class IRI="#Disque"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Disque"/>
+        <Class IRI="#Interprete"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Compositeur"/>
@@ -89,6 +98,10 @@
     <SubClassOf>
         <Class IRI="#Genre"/>
         <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroupeDeMusique"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Group"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Hip-Hop"/>
@@ -145,6 +158,70 @@
         <ObjectProperty IRI="#estMembre"/>
         <ObjectProperty IRI="http://xmlns.com/foaf/0.1/member"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#estReçu"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aGenre"/>
+        <ObjectProperty IRI="#estGenre"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aMembre"/>
+        <ObjectProperty IRI="#estMembre"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aReçu"/>
+        <ObjectProperty IRI="#estReçu"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aGenre"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aMembre"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aReçu"/>
+        <Class IRI="#Disque"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estGenre"/>
+        <Class IRI="#Genre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estMembre"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estReçu"/>
+        <Class IRI="#Récompense"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aGenre"/>
+        <Class IRI="#Genre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aMembre"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aReçu"/>
+        <Class IRI="#Récompense"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estGenre"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estMembre"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estReçu"/>
+        <Class IRI="#Disque"/>
+    </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#year"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
@@ -153,6 +230,16 @@
         <DataProperty IRI="#year"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#aMembre</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Un membre du groupe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#estMembre</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Une personne dans le groupe</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
