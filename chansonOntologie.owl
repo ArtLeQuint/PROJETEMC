@@ -190,11 +190,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#interprete"/>
-        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#interpretePar"/>
-        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isMember"/>
@@ -250,7 +250,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#interprete"/>
-        <Class IRI="#Chanson"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interprete"/>
+        <Class IRI="#Musicien"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#interpretePar"/>
@@ -290,7 +294,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#interprete"/>
-        <Class IRI="#Musicien"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interpretePar"/>
+        <Class IRI="#GroupeDeMusique"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#interpretePar"/>
