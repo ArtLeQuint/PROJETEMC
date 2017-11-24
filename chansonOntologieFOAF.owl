@@ -40,13 +40,10 @@
         <AnnotationProperty IRI="membershipClass"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="fundedBy"/>
+        <Class IRI="http://purl.org/dc/terms/Agent"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="gender"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.org/dc/terms/Agent"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -131,10 +128,6 @@
         <ObjectProperty IRI="maker"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="fundedBy"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="made"/>
         <Class IRI="Agent"/>
     </ObjectPropertyDomain>
@@ -150,10 +143,6 @@
         <ObjectProperty IRI="theme"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="fundedBy"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="made"/>
         <Class abbreviatedIRI="owl:Thing"/>
@@ -312,26 +301,6 @@
         <AnnotationProperty abbreviatedIRI="vs:term_status"/>
         <IRI>firstName</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>fundedBy</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An organization funding a project or person.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>fundedBy</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>fundedBy</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">funded by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
-        <IRI>fundedBy</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">archaic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

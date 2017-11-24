@@ -14,28 +14,13 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://xmlns.com/foaf/0.1/</Import>
     <Declaration>
-        <DataProperty IRI="#year"/>
+        <ObjectProperty IRI="#isMember"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Moderne"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Rock"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Récompense"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Classique"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Parolier"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Chanson"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#GroupeDeMusique"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -50,7 +35,43 @@
         <ObjectProperty IRI="#aMembre"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#estChanson"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Hip-Hop"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aChanson"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estGenre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rock"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Récompense"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Classique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chanson"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroupeDeMusique"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interpretePar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTheme"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interprete"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#estReçu"/>
@@ -75,9 +96,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Genre"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#estGenre"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Chanson"/>
@@ -143,12 +161,20 @@
         <Class IRI="#Rock"/>
     </DisjointClasses>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aChanson"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#aGenre"/>
-        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/theme"/>
+        <ObjectProperty IRI="#hasTheme"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#aMembre"/>
         <ObjectProperty IRI="http://xmlns.com/foaf/0.1/member"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#estChanson"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#estGenre"/>
@@ -156,12 +182,28 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#estMembre"/>
-        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/member"/>
+        <ObjectProperty IRI="#isMember"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#estReçu"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interprete"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interpretePar"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isMember"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aChanson"/>
+        <ObjectProperty IRI="#estChanson"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#aGenre"/>
         <ObjectProperty IRI="#estGenre"/>
@@ -174,6 +216,10 @@
         <ObjectProperty IRI="#aReçu"/>
         <ObjectProperty IRI="#estReçu"/>
     </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aChanson"/>
+        <Class IRI="#Disque"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#aGenre"/>
         <Class IRI="#Chanson"/>
@@ -187,6 +233,10 @@
         <Class IRI="#Disque"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estChanson"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#estGenre"/>
         <Class IRI="#Genre"/>
     </ObjectPropertyDomain>
@@ -198,6 +248,18 @@
         <ObjectProperty IRI="#estReçu"/>
         <Class IRI="#Récompense"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interprete"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interpretePar"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aChanson"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#aGenre"/>
         <Class IRI="#Genre"/>
@@ -211,6 +273,10 @@
         <Class IRI="#Récompense"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#estChanson"/>
+        <Class IRI="#Disque"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#estGenre"/>
         <Class IRI="#Chanson"/>
     </ObjectPropertyRange>
@@ -221,6 +287,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#estReçu"/>
         <Class IRI="#Disque"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interprete"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interpretePar"/>
+        <Class IRI="#Musicien"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#year"/>
