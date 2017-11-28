@@ -14,6 +14,108 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://xmlns.com/foaf/0.1/</Import>
     <Declaration>
+        <ObjectProperty IRI="#aInterprete"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Guitariste"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JamaisSolo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hip-Hop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompositeurRockSeulement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diamant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#3xDiamant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aChanson"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bassiste"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#composePar"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#year"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nationalite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aParticipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Classique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chanson"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aParticipant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroupeDeMusique"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interpretePar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoloSeulement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroupeMixte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MusicienRockOuPop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AuteurInterprete"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2xDiamant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RecompenseCeremonie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Or"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estMembre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Batteur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2xPlatine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Compositeur"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aEcrit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genre"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isMember"/>
     </Declaration>
     <Declaration>
@@ -23,7 +125,10 @@
         <Class IRI="#Parolier"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ObjectProperty IRI="#aCompose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DansPlusieursGroupes"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#aReçu"/>
@@ -35,71 +140,113 @@
         <ObjectProperty IRI="#aMembre"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#aRole"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#estChanson"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Hip-Hop"/>
+        <Class IRI="#Argent"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#aChanson"/>
+        <ObjectProperty IRI="#ecritPar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#3xPlatine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChansonRock"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Platine"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#estGenre"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#year"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Rock"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Récompense"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Classique"/>
+        <ObjectProperty IRI="#estRole"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Chanson"/>
+        <Class IRI="#MusicienPlatineFrançais"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GroupeDeMusique"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#interpretePar"/>
+        <DataProperty IRI="#dateArrivee"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasTheme"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#interprete"/>
+        <Class IRI="#CertificationDisque"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#estReçu"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#4xDiamant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelationAppartenance"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Musicien"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#estMembre"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Disque"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Interprete"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Compositeur"/>
+        <Class IRI="#Disque"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#aGenre"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Genre"/>
+        <Class IRI="#Chanteur"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="#Argent"/>
+        <Class IRI="#CertificationDisque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AuteurInterprete"/>
+        <Class IRI="#Interprete"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AuteurInterprete"/>
+        <Class IRI="#Parolier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bassiste"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Batteur"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CertificationDisque"/>
+        <Class IRI="#Récompense"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Chanson"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChansonRock"/>
+        <Class IRI="#Chanson"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChansonRock"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#aGenre"/>
+            <Class IRI="#Rock"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chanteur"/>
+        <Class IRI="#Role"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Classique"/>
@@ -110,8 +257,48 @@
         <Class IRI="#Musicien"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Compositeur"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#aCompose"/>
+            <Class IRI="#Chanson"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompositeurRockSeulement"/>
+        <Class IRI="#Compositeur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompositeurRockSeulement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#aCompose"/>
+            <Class IRI="#ChansonRock"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DansPlusieursGroupes"/>
+        <Class IRI="#Musicien"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DansPlusieursGroupes"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#estMembre"/>
+            <Class IRI="#GroupeDeMusique"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diamant"/>
+        <Class IRI="#CertificationDisque"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Disque"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disque"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#aChanson"/>
+            <Class IRI="#Chanson"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Genre"/>
@@ -122,12 +309,67 @@
         <Class IRI="http://xmlns.com/foaf/0.1/Group"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#GroupeMixte"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroupeMixte"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#aMembre"/>
+                <Class IRI="#Musicien"/>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
+                <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">female</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroupeMixte"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#aMembre"/>
+                <Class IRI="#Musicien"/>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
+                <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">male</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Guitariste"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Hip-Hop"/>
         <Class IRI="#Genre"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Interprete"/>
         <Class IRI="#Musicien"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interprete"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#aInterprete"/>
+            <Class IRI="#Chanson"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JamaisSolo"/>
+        <Class IRI="#Musicien"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JamaisSolo"/>
+        <ObjectMaxCardinality cardinality="0">
+            <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
+                <Class IRI="#Musicien"/>
+            </ObjectMaxCardinality>
+        </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Moderne"/>
@@ -138,21 +380,143 @@
         <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#MusicienPlatineFrançais"/>
+        <Class IRI="#Interprete"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MusicienPlatineFrançais"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#aInterprete"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#estChanson"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#aReçu"/>
+                    <Class IRI="#Platine"/>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MusicienRockOuPop"/>
+        <Class IRI="#Musicien"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MusicienRockOuPop"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+                <Class IRI="#ChansonRock"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#aGenre"/>
+                    <Class IRI="#Pop"/>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Or"/>
+        <Class IRI="#CertificationDisque"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Parolier"/>
         <Class IRI="#Musicien"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parolier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#aEcrit"/>
+            <Class IRI="#Chanson"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platine"/>
+        <Class IRI="#CertificationDisque"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Pop"/>
         <Class IRI="#Genre"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#RecompenseCeremonie"/>
+        <Class IRI="#Récompense"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelationAppartenance"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Rock"/>
         <Class IRI="#Genre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Role"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Récompense"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoloSeulement"/>
+        <Class IRI="#Interprete"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoloSeulement"/>
+        <ObjectExactCardinality cardinality="0">
+            <ObjectProperty IRI="#aParticipe"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#aParticipant"/>
+                <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+            </ObjectMinCardinality>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoloSeulement"/>
+        <ObjectExactCardinality cardinality="0">
+            <ObjectProperty IRI="#estMembre"/>
+            <Class IRI="#GroupeDeMusique"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2xDiamant"/>
+        <Class IRI="#CertificationDisque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2xPlatine"/>
+        <Class IRI="#CertificationDisque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3xDiamant"/>
+        <Class IRI="#CertificationDisque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3xPlatine"/>
+        <Class IRI="#CertificationDisque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#4xDiamant"/>
+        <Class IRI="#CertificationDisque"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Argent"/>
+        <Class IRI="#Diamant"/>
+        <Class IRI="#Or"/>
+        <Class IRI="#Platine"/>
+        <Class IRI="#2xDiamant"/>
+        <Class IRI="#2xPlatine"/>
+        <Class IRI="#3xDiamant"/>
+        <Class IRI="#3xPlatine"/>
+        <Class IRI="#4xDiamant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bassiste"/>
+        <Class IRI="#Batteur"/>
+        <Class IRI="#Chanteur"/>
+        <Class IRI="#Guitariste"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Classique"/>
         <Class IRI="#Hip-Hop"/>
@@ -160,17 +524,53 @@
         <Class IRI="#Pop"/>
         <Class IRI="#Rock"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Genre"/>
+        <Class IRI="#Role"/>
+    </DisjointClasses>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#aChanson"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aCompose"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aEcrit"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#aGenre"/>
         <ObjectProperty IRI="#hasTheme"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aInterprete"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#aMembre"/>
         <ObjectProperty IRI="http://xmlns.com/foaf/0.1/member"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aParticipant"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aParticipe"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aRole"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#composePar"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ecritPar"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#estChanson"/>
@@ -189,8 +589,8 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#interprete"/>
-        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+        <ObjectProperty IRI="#estRole"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#interpretePar"/>
@@ -205,8 +605,20 @@
         <ObjectProperty IRI="#estChanson"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#aCompose"/>
+        <ObjectProperty IRI="#composePar"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aEcrit"/>
+        <ObjectProperty IRI="#ecritPar"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#aGenre"/>
         <ObjectProperty IRI="#estGenre"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aInterprete"/>
+        <ObjectProperty IRI="#interpretePar"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#aMembre"/>
@@ -216,21 +628,101 @@
         <ObjectProperty IRI="#aReçu"/>
         <ObjectProperty IRI="#estReçu"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aRole"/>
+        <ObjectProperty IRI="#estRole"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTheme"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/theme"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isMember"/>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/member"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#aMembre"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#aRole"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#estMembre"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#estRole"/>
+    </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#aChanson"/>
         <Class IRI="#Disque"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aCompose"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aCompose"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aEcrit"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aEcrit"/>
+        <Class IRI="#Musicien"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#aGenre"/>
         <Class IRI="#Chanson"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aInterprete"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aInterprete"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#aMembre"/>
         <Class IRI="#GroupeDeMusique"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aMembre"/>
+        <Class IRI="#RelationAppartenance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aParticipant"/>
+        <Class IRI="#Disque"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aParticipe"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aParticipe"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#aReçu"/>
         <Class IRI="#Disque"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aRole"/>
+        <Class IRI="#RelationAppartenance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aRole"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#composePar"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ecritPar"/>
+        <Class IRI="#Chanson"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#estChanson"/>
@@ -245,23 +737,43 @@
         <Class IRI="#Musicien"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estMembre"/>
+        <Class IRI="#RelationAppartenance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#estReçu"/>
         <Class IRI="#Récompense"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#interprete"/>
-        <Class IRI="#GroupeDeMusique"/>
+        <ObjectProperty IRI="#estRole"/>
+        <Class IRI="#Musicien"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#interprete"/>
-        <Class IRI="#Musicien"/>
+        <ObjectProperty IRI="#estRole"/>
+        <Class IRI="#RelationAppartenance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTheme"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#interpretePar"/>
         <Class IRI="#Chanson"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMember"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#aChanson"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aCompose"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aEcrit"/>
         <Class IRI="#Chanson"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -269,12 +781,56 @@
         <Class IRI="#Genre"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#aInterprete"/>
+        <Class IRI="#Chanson"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#aMembre"/>
         <Class IRI="#Musicien"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#aMembre"/>
+        <Class IRI="#RelationAppartenance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aParticipant"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aParticipant"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aParticipe"/>
+        <Class IRI="#Disque"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#aReçu"/>
         <Class IRI="#Récompense"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aRole"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aRole"/>
+        <Class IRI="#RelationAppartenance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#composePar"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#composePar"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ecritPar"/>
+        <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ecritPar"/>
+        <Class IRI="#Musicien"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#estChanson"/>
@@ -289,12 +845,24 @@
         <Class IRI="#GroupeDeMusique"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#estMembre"/>
+        <Class IRI="#RelationAppartenance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#estReçu"/>
         <Class IRI="#Disque"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#interprete"/>
-        <Class IRI="#Chanson"/>
+        <ObjectProperty IRI="#estRole"/>
+        <Class IRI="#RelationAppartenance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estRole"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTheme"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#interpretePar"/>
@@ -304,18 +872,61 @@
         <ObjectProperty IRI="#interpretePar"/>
         <Class IRI="#Musicien"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMember"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Group"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#dateArrivee"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nationalite"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateArrivee"/>
+        <Class IRI="#RelationAppartenance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nationalite"/>
+        <Class IRI="#Musicien"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#year"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateArrivee"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nationalite"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#year"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RelationAppartenance</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation pour faire un triple lien Groupe/Person/Rôle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#aMembre</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Un membre du groupe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#dateArrivee</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dateArrivee</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">date d&apos;arrivée d&apos;un membre dans un groupe</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
