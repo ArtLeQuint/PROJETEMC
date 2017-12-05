@@ -984,7 +984,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Smells Like Teen Spirits</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Smells Like Teen Spirit</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#genre"/>
