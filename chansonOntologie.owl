@@ -92,6 +92,9 @@
         <Class IRI="#GroupeMixte"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Nirvana"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#RelationDaveFoo"/>
     </Declaration>
     <Declaration>
@@ -180,9 +183,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#About_a_Girl"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Nirvana_(groupe)"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Floyd_The_Barber"/>
@@ -464,6 +464,10 @@
         <NamedIndividual IRI="#Negative_Creep"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#GroupeDeMusique"/>
+        <NamedIndividual IRI="#Nirvana"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Chanson"/>
         <NamedIndividual IRI="#Paper_Cuts"/>
     </ClassAssertion>
@@ -526,10 +530,6 @@
     <ClassAssertion>
         <Class IRI="#Musicien"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#GroupeDeMusique"/>
-        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Nirvana_(groupe)"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composePar"/>
@@ -694,7 +694,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembreRelation"/>
         <NamedIndividual IRI="#RelationAaronNirvana"/>
-        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Nirvana_(groupe)"/>
+        <NamedIndividual IRI="#Nirvana"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembreRelation"/>
@@ -704,17 +704,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembreRelation"/>
         <NamedIndividual IRI="#RelationDaveNirvana"/>
-        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Nirvana_(groupe)"/>
+        <NamedIndividual IRI="#Nirvana"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembreRelation"/>
         <NamedIndividual IRI="#RelationKristNirvana"/>
-        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Nirvana_(groupe)"/>
+        <NamedIndividual IRI="#Nirvana"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembreRelation"/>
         <NamedIndividual IRI="#RelationKurtNirvana"/>
-        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Nirvana_(groupe)"/>
+        <NamedIndividual IRI="#Nirvana"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#aCompose"/>
