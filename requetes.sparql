@@ -1,0 +1,33 @@
+#######################################
+#		Liste des requetes !
+#######################################
+
+#1.Titres  de  chansons,  nom  du  musicien  ou  du  groupe  et  genres  
+#de  ces  chansons  (la  chanson apparaît y compris lorsqu'il n'y a pas de genre associé à la chanson).
+
+
+#2.Sur quel disque de Nirvana se trouve la chanson Smells Like Teen Spirit ?
+SELECT ?chanson
+WHERE( ?chanson a univ: )
+
+#3.Y a-t-il une femme dans le groupe Garbage ?
+
+
+#4.Combien y a-t-il de chansons sur les différents disques de Nirvana ? 
+
+
+#5.Titres des chansons dont on ne connaît pas le genre.
+
+
+#6. Noms des récompenses reçues par des musiciens en 2014 (prix et disque de certification) et nom du musicien ou groupe.
+
+
+#7. Noms des groupes qui ont fait moins de 4 disques et nombre de ces disques. 
+
+
+#8. Tous les noms de famille de musiciens commençant par c (ou C), triés par ordre alphabétique.
+#(vous pouvez regarder les expressions régulières https://www.w3.org/TR/rdf-sparql-query/)
+
+
+#9. Pour les musiciens membres de groupes, nom du groupe et du musicien.
+#10. Nombre de fois où des femmes jouent dans un (ou des) groupe(s).
