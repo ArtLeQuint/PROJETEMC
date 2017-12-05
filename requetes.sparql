@@ -16,8 +16,9 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 #2.Sur quel disque de Nirvana se trouve la chanson Smells Like Teen Spirit ?
 SELECT ?name
 WHERE { ?disc a moi:Disque;
-	foaf:name ?name }
-
+		foaf:name ?name ;
+		moi:aChanson moi:Smells_Like_Teen_Spirits }
+		
 #3.Y a-t-il une femme dans le groupe Garbage ?
 
 
