@@ -2,13 +2,21 @@
 #		Liste des requetes !
 #######################################
 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
 #1.Titres  de  chansons,  nom  du  musicien  ou  du  groupe  et  genres  
 #de  ces  chansons  (la  chanson apparaît y compris lorsqu'il n'y a pas de genre associé à la chanson).
 
 
 #2.Sur quel disque de Nirvana se trouve la chanson Smells Like Teen Spirit ?
-SELECT ?chanson
-WHERE( ?chanson a univ: )
+SELECT ?name
+WHERE { ?disc a moi:Disque;
+	foaf:name ?name }
 
 #3.Y a-t-il une femme dans le groupe Garbage ?
 
@@ -31,3 +39,4 @@ WHERE( ?chanson a univ: )
 
 #9. Pour les musiciens membres de groupes, nom du groupe et du musicien.
 #10. Nombre de fois où des femmes jouent dans un (ou des) groupe(s).
+
