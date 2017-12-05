@@ -28,6 +28,9 @@
         <AnnotationProperty abbreviatedIRI="vs:term_status"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="maker"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Document"/>
     </Declaration>
     <Declaration>
@@ -46,7 +49,13 @@
         <DataProperty IRI="gender"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Group"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="wot:assurance"/>
@@ -58,6 +67,9 @@
         <DataProperty IRI="name"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://schema.org/Person"/>
     </Declaration>
     <Declaration>
@@ -67,34 +79,19 @@
         <ObjectProperty IRI="made"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="wot:src_assurance"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="member"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="theme"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="maker"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:date"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Group"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="lastName"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://schema.org/CreativeWork"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="wot:src_assurance"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="theme"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
@@ -136,10 +133,6 @@
         <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="member"/>
-        <Class IRI="Group"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="theme"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
@@ -149,10 +142,6 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="maker"/>
-        <Class IRI="Agent"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="member"/>
         <Class IRI="Agent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -380,26 +369,6 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="vs:term_status"/>
         <IRI>maker</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>member</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indicates a member of a Group</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>member</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>member</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">member</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
-        <IRI>member</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
