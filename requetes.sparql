@@ -20,7 +20,11 @@ WHERE { ?disc a moi:Disque;
 		moi:aChanson moi:Smells_Like_Teen_Spirits }
 		
 #3.Y a-t-il une femme dans le groupe Garbage ?
-
+SELECT ?gender
+WHERE {	moi:Nirvana moi:chain_aMembre ?membre.
+	?membre foaf:gender ?gender.
+	FILTER( regex(str(?gender) = 'female' ))
+}
 
 #4.Combien y a-t-il de chansons sur les différents disques de Nirvana ? 
 
