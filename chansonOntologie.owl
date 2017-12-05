@@ -229,6 +229,26 @@
     <Declaration>
         <Class IRI="#Interprete"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#ChansonRock"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Chanson"/>
+            <DataHasValue>
+                <DataProperty IRI="#genre"/>
+                <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Compositeur"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Musicien"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#aCompose"/>
+                <Class IRI="#Chanson"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#AuteurInterprete"/>
         <Class IRI="#Interprete"/>
@@ -244,28 +264,6 @@
     <SubClassOf>
         <Class IRI="#Chanson"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ChansonRock"/>
-        <Class IRI="#Chanson"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ChansonRock"/>
-        <DataHasValue>
-            <DataProperty IRI="#genre"/>
-            <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Compositeur"/>
-        <Class IRI="#Musicien"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Compositeur"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#aCompose"/>
-            <Class IRI="#Chanson"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompositeurRockSeulement"/>
@@ -427,6 +425,14 @@
         <Class IRI="#Disque"/>
         <Class IRI="#Recompense"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Disque"/>
+        <NamedIndividual IRI="#Bleach"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Disque"/>
+        <NamedIndividual IRI="#In_Utero"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Compositeur"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Dave_Grohl"/>
