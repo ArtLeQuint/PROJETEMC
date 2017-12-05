@@ -252,6 +252,16 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CompositeurRockSeulement"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Compositeur"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#aCompose"/>
+                <Class IRI="#ChansonRock"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#AuteurInterprete"/>
         <Class IRI="#Interprete"/>
@@ -267,17 +277,6 @@
     <SubClassOf>
         <Class IRI="#Chanson"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CompositeurRockSeulement"/>
-        <Class IRI="#Compositeur"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CompositeurRockSeulement"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#aCompose"/>
-            <Class IRI="#ChansonRock"/>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DansPlusieursGroupes"/>
@@ -631,6 +630,11 @@
         <ObjectProperty IRI="#ecritPar"/>
         <NamedIndividual IRI="#Floyd_The_Barber"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aChanson"/>
+        <NamedIndividual IRI="#In_Utero"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#aParticipant"/>

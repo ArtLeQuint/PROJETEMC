@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1512509919175" name="http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie" uri="chansonOntologie.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1512509919175" name="http://xmlns.com/foaf/0.1/" uri="chansonOntologieFOAF.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512510393012" name="http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie" uri="chansonOntologie.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512510393012" name="http://xmlns.com/foaf/0.1/" uri="chansonOntologieFOAF.owl"/>
     </group>
 </catalog>
