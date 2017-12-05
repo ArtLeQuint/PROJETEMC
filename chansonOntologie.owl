@@ -86,6 +86,9 @@
         <DataProperty IRI="#role"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#GroupeMixte"/>
     </Declaration>
     <Declaration>
@@ -426,16 +429,108 @@
         <Class IRI="#Recompense"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#About_a_Girl"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Disque"/>
         <NamedIndividual IRI="#Bleach"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Blew"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Floyd_The_Barber"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GroupeDeMusique"/>
+        <NamedIndividual IRI="#Foo_Fighters"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Disque"/>
         <NamedIndividual IRI="#In_Utero"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Compositeur"/>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Love_Buzz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Mr._Moustache"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Negative_Creep"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Paper_Cuts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationAppartenance"/>
+        <NamedIndividual IRI="#RelationAaronNirvana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationAppartenance"/>
+        <NamedIndividual IRI="#RelationDaveFoo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationAppartenance"/>
+        <NamedIndividual IRI="#RelationDaveNirvana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationAppartenance"/>
+        <NamedIndividual IRI="#RelationKristNirvana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationAppartenance"/>
+        <NamedIndividual IRI="#RelationKurtNirvana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="#Robbie_van_Leeuwen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#School"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Scoff"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Sifting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chanson"/>
+        <NamedIndividual IRI="#Swap_Meet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Aaron_Burckhard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musicien"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Dave_Grohl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Krist_Novoselic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GroupeDeMusique"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Nirvana_(groupe)"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composePar"/>
@@ -654,6 +749,16 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composePar"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ecritPar"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#composePar"/>
         <NamedIndividual IRI="#Swap_Meet"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
     </ObjectPropertyAssertion>
@@ -866,6 +971,16 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Sifting"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Sifting</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Smells Like Teen Spirits</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#genre"/>
