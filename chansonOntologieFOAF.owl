@@ -91,9 +91,6 @@
         <Class IRI="Person"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="theme"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
     </Declaration>
     <EquivalentClasses>
@@ -132,10 +129,6 @@
         <ObjectProperty IRI="maker"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="theme"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="made"/>
         <Class abbreviatedIRI="owl:Thing"/>
@@ -143,10 +136,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="maker"/>
         <Class IRI="Agent"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="theme"/>
-        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyRange>
     <FunctionalDataProperty>
         <DataProperty IRI="gender"/>
@@ -429,26 +418,6 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="vs:term_status"/>
         <IRI>surname</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">archaic</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>theme</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A theme.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>theme</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>theme</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">theme</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
-        <IRI>theme</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">archaic</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
