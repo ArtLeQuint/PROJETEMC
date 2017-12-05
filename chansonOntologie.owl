@@ -464,6 +464,10 @@
         <NamedIndividual IRI="#Negative_Creep"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#ChansonRock"/>
+        <NamedIndividual IRI="#Negative_Creep"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#GroupeDeMusique"/>
         <NamedIndividual IRI="#Nirvana"/>
     </ClassAssertion>
@@ -842,6 +846,11 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">In Utero</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Love_Buzz"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Love_Buzz"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Love Buzz</Literal>
@@ -855,11 +864,6 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Mr._Moustache"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Mr. Moustache</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Negative_Creep"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
