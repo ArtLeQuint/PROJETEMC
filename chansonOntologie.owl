@@ -26,10 +26,10 @@
         <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Swap_Meet"/>
+        <NamedIndividual IRI="#Mr._Moustache"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Mr._Moustache"/>
+        <NamedIndividual IRI="#Swap_Meet"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -98,10 +98,10 @@
         <ObjectProperty IRI="#interpretePar"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+        <DataProperty IRI="#role"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#role"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GroupeMixte"/>
