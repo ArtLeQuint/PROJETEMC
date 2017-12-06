@@ -14,10 +14,16 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://xmlns.com/foaf/0.1/</Import>
     <Declaration>
-        <DataProperty IRI="#certifNom"/>
+        <NamedIndividual IRI="#Album_du_mois"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisqueDoubleRecompense"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#aInterprete"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Swap_Meet"/>
@@ -36,6 +42,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Negative_Creep"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stromae"/>
     </Declaration>
     <Declaration>
         <Class IRI="#JamaisSolo"/>
@@ -59,10 +68,10 @@
         <DataProperty IRI="#year"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Bleach"/>
+        <NamedIndividual IRI="#Blew"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Blew"/>
+        <NamedIndividual IRI="#Bleach"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#nationalite"/>
@@ -77,6 +86,9 @@
         <ObjectProperty IRI="#aParticipant"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DisqueTripleRecompense"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#GroupeDeMusique"/>
     </Declaration>
     <Declaration>
@@ -86,10 +98,10 @@
         <ObjectProperty IRI="#interpretePar"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#role"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+        <DataProperty IRI="#role"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GroupeMixte"/>
@@ -110,10 +122,16 @@
         <NamedIndividual IRI="#Garbage"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Laurent_Voulzy"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#genre"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RecompenseCeremonie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ArtisteInterpreteMasculinAnnée"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#aMembreRelation"/>
@@ -125,13 +143,22 @@
         <NamedIndividual IRI="#RelationKristNirvana"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Album_de_L&apos;annee"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#RelationDukeGarbae"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Compositeur"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#chain_aReçu"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#aEcrit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#chain_estReçu"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Recompense"/>
@@ -176,6 +203,9 @@
         <ObjectProperty IRI="#aMembre"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Racine_Carrée"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#estChanson"/>
     </Declaration>
     <Declaration>
@@ -198,6 +228,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#About_a_Girl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Album_de_la_chanson_de_l&apos;annee"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuadrupleDiamant"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Floyd_The_Barber"/>
@@ -224,6 +260,9 @@
         <Class IRI="#CertificationDisque"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Platine"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#RelationAaronNirvana"/>
     </Declaration>
     <Declaration>
@@ -240,6 +279,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Musicien"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alain_Souchon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisqueRecompense"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Disque"/>
@@ -295,6 +340,45 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#DisqueDoubleRecompense"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disque"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#aReçu"/>
+                <DataHasValue>
+                    <DataProperty IRI="#recompenseNom"/>
+                    <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Victoires de la musique</Literal>
+                </DataHasValue>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DisqueRecompense"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disque"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#aReçu"/>
+                <DataHasValue>
+                    <DataProperty IRI="#recompenseNom"/>
+                    <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Victoires de la musique</Literal>
+                </DataHasValue>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DisqueTripleRecompense"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disque"/>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty IRI="#aReçu"/>
+                <DataHasValue>
+                    <DataProperty IRI="#recompenseNom"/>
+                    <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Victoires de la musique</Literal>
+                </DataHasValue>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#GroupeMixte"/>
         <ObjectIntersectionOf>
             <Class IRI="#GroupeDeMusique"/>
@@ -325,6 +409,65 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#JamaisSolo"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Musicien"/>
+            <ObjectMaxCardinality cardinality="0">
+                <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+                <ObjectMaxCardinality cardinality="1">
+                    <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
+                    <Class IRI="#Musicien"/>
+                </ObjectMaxCardinality>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MusicienPlatineFrançais"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Interprete"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#chain_aReçu"/>
+                <ObjectUnionOf>
+                    <DataHasValue>
+                        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+                        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">2xPlatine</Literal>
+                    </DataHasValue>
+                    <DataHasValue>
+                        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+                        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">3xPlatine</Literal>
+                    </DataHasValue>
+                    <DataHasValue>
+                        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+                        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Platine</Literal>
+                    </DataHasValue>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="#nationalite"/>
+                <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">français</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MusicienRockOuPop"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Musicien"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
+                <ObjectUnionOf>
+                    <DataHasValue>
+                        <DataProperty IRI="#genre"/>
+                        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Pop</Literal>
+                    </DataHasValue>
+                    <DataHasValue>
+                        <DataProperty IRI="#genre"/>
+                        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
+                    </DataHasValue>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Parolier"/>
         <ObjectIntersectionOf>
             <Class IRI="#Musicien"/>
@@ -332,6 +475,69 @@
                 <ObjectProperty IRI="#aEcrit"/>
                 <Class IRI="#Chanson"/>
             </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SoloSeulement"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Interprete"/>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="#aParticipe"/>
+                <ObjectMinCardinality cardinality="2">
+                    <ObjectProperty IRI="#aParticipant"/>
+                    <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+                </ObjectMinCardinality>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="#estMembre"/>
+                <Class IRI="#RelationAppartenance"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TresRecompense"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Musicien"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#aParticipe"/>
+                        <Class IRI="#DisqueDoubleRecompense"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#aParticipe"/>
+                        <Class IRI="#DisqueTripleRecompense"/>
+                    </ObjectMinCardinality>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#aParticipe"/>
+                        <Class IRI="#DisqueDoubleRecompense"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="2">
+                        <ObjectProperty IRI="#aParticipe"/>
+                        <Class IRI="#DisqueRecompense"/>
+                    </ObjectMinCardinality>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#aParticipe"/>
+                        <Class IRI="#DisqueRecompense"/>
+                    </ObjectMinCardinality>
+                    <ObjectMinCardinality cardinality="1">
+                        <ObjectProperty IRI="#aParticipe"/>
+                        <Class IRI="#DisqueTripleRecompense"/>
+                    </ObjectMinCardinality>
+                </ObjectIntersectionOf>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="#aParticipe"/>
+                    <Class IRI="#DisqueTripleRecompense"/>
+                </ObjectMinCardinality>
+                <ObjectMinCardinality cardinality="3">
+                    <ObjectProperty IRI="#aParticipe"/>
+                    <Class IRI="#DisqueRecompense"/>
+                </ObjectMinCardinality>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
@@ -354,34 +560,24 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#DisqueRecompense"/>
+        <Class IRI="#Disque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisqueTripleRecompense"/>
+        <Class IRI="#Disque"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#GroupeDeMusique"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Group"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#JamaisSolo"/>
-        <Class IRI="#Musicien"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#JamaisSolo"/>
-        <ObjectMaxCardinality cardinality="0">
-            <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
-            <ObjectMaxCardinality cardinality="1">
-                <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
-                <Class IRI="#Musicien"/>
-            </ObjectMaxCardinality>
-        </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Musicien"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MusicienPlatineFrançais"/>
-        <Class IRI="#Interprete"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MusicienRockOuPop"/>
-        <Class IRI="#Musicien"/>
+        <Class IRI="#Recompense"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RecompenseCeremonie"/>
@@ -391,44 +587,6 @@
         <Class IRI="#RelationAppartenance"/>
         <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SoloSeulement"/>
-        <Class IRI="#Interprete"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SoloSeulement"/>
-        <ObjectExactCardinality cardinality="0">
-            <ObjectProperty IRI="#aParticipe"/>
-            <ObjectMinCardinality cardinality="2">
-                <ObjectProperty IRI="#aParticipant"/>
-                <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
-            </ObjectMinCardinality>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SoloSeulement"/>
-        <ObjectExactCardinality cardinality="0">
-            <ObjectProperty IRI="#estMembre"/>
-            <Class IRI="#RelationAppartenance"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TresRecompense"/>
-        <Class IRI="#Musicien"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TresRecompense"/>
-        <ObjectMinCardinality cardinality="3">
-            <ObjectProperty IRI="#aParticipe"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#aReçu"/>
-                <DataHasValue>
-                    <DataProperty IRI="#recompenseNom"/>
-                    <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Victoire de la Musique</Literal>
-                </DataHasValue>
-            </ObjectSomeValuesFrom>
-        </ObjectMinCardinality>
-    </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Chanson"/>
         <Class IRI="#Disque"/>
@@ -437,6 +595,18 @@
     <ClassAssertion>
         <Class IRI="#Chanson"/>
         <NamedIndividual IRI="#About_a_Girl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="#Alain_Souchon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecompenseCeremonie"/>
+        <NamedIndividual IRI="#Album_du_mois"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecompenseCeremonie"/>
+        <NamedIndividual IRI="#ArtisteInterpreteMasculinAnnée"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Disque"/>
@@ -467,6 +637,10 @@
         <NamedIndividual IRI="#In_Utero"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="#Laurent_Voulzy"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Chanson"/>
         <NamedIndividual IRI="#Love_Buzz"/>
     </ClassAssertion>
@@ -487,6 +661,18 @@
         <NamedIndividual IRI="#Paper_Cuts"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#CertificationDisque"/>
+        <NamedIndividual IRI="#Platine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CertificationDisque"/>
+        <NamedIndividual IRI="#QuadrupleDiamant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Disque"/>
+        <NamedIndividual IRI="#Racine_Carrée"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#RelationAppartenance"/>
         <NamedIndividual IRI="#RelationAaronNirvana"/>
     </ClassAssertion>
@@ -497,6 +683,10 @@
     <ClassAssertion>
         <Class IRI="#RelationAppartenance"/>
         <NamedIndividual IRI="#RelationDaveNirvana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationAppartenance"/>
+        <NamedIndividual IRI="#RelationDukeGarbae"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#RelationAppartenance"/>
@@ -531,8 +721,24 @@
         <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="#Stromae"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Chanson"/>
         <NamedIndividual IRI="#Swap_Meet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Disque"/>
+        <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecompenseCeremonie"/>
+        <NamedIndividual IRI="#Album_de_L&apos;annee"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecompenseCeremonie"/>
+        <NamedIndividual IRI="#Album_de_la_chanson_de_l&apos;annee"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Musicien"/>
@@ -550,6 +756,50 @@
         <Class IRI="#Musicien"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
     </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#About_a_Girl"/>
+        <NamedIndividual IRI="#Alain_Souchon"/>
+        <NamedIndividual IRI="#Album_du_mois"/>
+        <NamedIndividual IRI="#ArtisteInterpreteMasculinAnnée"/>
+        <NamedIndividual IRI="#Bleach"/>
+        <NamedIndividual IRI="#Blew"/>
+        <NamedIndividual IRI="#Duke_Erikson"/>
+        <NamedIndividual IRI="#Floyd_The_Barber"/>
+        <NamedIndividual IRI="#Foo_Fighters"/>
+        <NamedIndividual IRI="#Garbage"/>
+        <NamedIndividual IRI="#In_Utero"/>
+        <NamedIndividual IRI="#Laurent_Voulzy"/>
+        <NamedIndividual IRI="#Love_Buzz"/>
+        <NamedIndividual IRI="#Mr._Moustache"/>
+        <NamedIndividual IRI="#Negative_Creep"/>
+        <NamedIndividual IRI="#Nirvana"/>
+        <NamedIndividual IRI="#Paper_Cuts"/>
+        <NamedIndividual IRI="#Platine"/>
+        <NamedIndividual IRI="#QuadrupleDiamant"/>
+        <NamedIndividual IRI="#Racine_Carrée"/>
+        <NamedIndividual IRI="#RelationAaronNirvana"/>
+        <NamedIndividual IRI="#RelationDaveFoo"/>
+        <NamedIndividual IRI="#RelationDaveNirvana"/>
+        <NamedIndividual IRI="#RelationDukeGarbae"/>
+        <NamedIndividual IRI="#RelationKristNirvana"/>
+        <NamedIndividual IRI="#RelationKurtNirvana"/>
+        <NamedIndividual IRI="#RelationShirleyGarbage"/>
+        <NamedIndividual IRI="#Robbie_van_Leeuwen"/>
+        <NamedIndividual IRI="#School"/>
+        <NamedIndividual IRI="#Scoff"/>
+        <NamedIndividual IRI="#Shirley_Manson"/>
+        <NamedIndividual IRI="#Sifting"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+        <NamedIndividual IRI="#Stromae"/>
+        <NamedIndividual IRI="#Swap_Meet"/>
+        <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
+        <NamedIndividual IRI="#Album_de_L&apos;annee"/>
+        <NamedIndividual IRI="#Album_de_la_chanson_de_l&apos;annee"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Aaron_Burckhard"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Dave_Grohl"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Krist_Novoselic"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#composePar"/>
         <NamedIndividual IRI="#About_a_Girl"/>
@@ -559,6 +809,16 @@
         <ObjectProperty IRI="#ecritPar"/>
         <NamedIndividual IRI="#About_a_Girl"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estReçu"/>
+        <NamedIndividual IRI="#Album_du_mois"/>
+        <NamedIndividual IRI="#Racine_Carrée"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estReçu"/>
+        <NamedIndividual IRI="#ArtisteInterpreteMasculinAnnée"/>
+        <NamedIndividual IRI="#Racine_Carrée"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#aChanson"/>
@@ -714,6 +974,21 @@
         <ObjectProperty IRI="#ecritPar"/>
         <NamedIndividual IRI="#Paper_Cuts"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estReçu"/>
+        <NamedIndividual IRI="#Platine"/>
+        <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estReçu"/>
+        <NamedIndividual IRI="#QuadrupleDiamant"/>
+        <NamedIndividual IRI="#Racine_Carrée"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aParticipant"/>
+        <NamedIndividual IRI="#Racine_Carrée"/>
+        <NamedIndividual IRI="#Stromae"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembreRelation"/>
@@ -811,9 +1086,34 @@
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aParticipant"/>
+        <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
+        <NamedIndividual IRI="#Alain_Souchon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aParticipant"/>
+        <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
+        <NamedIndividual IRI="#Laurent_Voulzy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estReçu"/>
+        <NamedIndividual IRI="#Album_de_L&apos;annee"/>
+        <NamedIndividual IRI="#Racine_Carrée"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estReçu"/>
+        <NamedIndividual IRI="#Album_de_la_chanson_de_l&apos;annee"/>
+        <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembre"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Aaron_Burckhard"/>
         <NamedIndividual IRI="#RelationAaronNirvana"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aInterprete"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Dave_Grohl"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembre"/>
@@ -831,6 +1131,16 @@
         <NamedIndividual IRI="#RelationKristNirvana"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aInterprete"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+        <NamedIndividual IRI="#Paper_Cuts"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aInterprete"/>
+        <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#estMembre"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Kurt_Cobain"/>
         <NamedIndividual IRI="#RelationKurtNirvana"/>
@@ -844,6 +1154,56 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#About_a_Girl"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">About a girl</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationalite"/>
+        <NamedIndividual IRI="#Alain_Souchon"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">français</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
+        <NamedIndividual IRI="#Alain_Souchon"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/lastName"/>
+        <NamedIndividual IRI="#Alain_Souchon"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Souchon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Alain_Souchon"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Alain Souchon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#recompenseNom"/>
+        <NamedIndividual IRI="#Album_du_mois"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Victoires de la musique</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Album_du_mois"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Album_du_mois"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Album Du Mois</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#recompenseNom"/>
+        <NamedIndividual IRI="#ArtisteInterpreteMasculinAnnée"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Victoires de la musique</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#ArtisteInterpreteMasculinAnnée"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#ArtisteInterpreteMasculinAnnée"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Artiste Interprete Masculin de l&apos;année</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
@@ -901,6 +1261,26 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">In Utero</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#nationalite"/>
+        <NamedIndividual IRI="#Laurent_Voulzy"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">français</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
+        <NamedIndividual IRI="#Laurent_Voulzy"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/lastName"/>
+        <NamedIndividual IRI="#Laurent_Voulzy"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Voulzy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Laurent_Voulzy"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Laurent Voulzy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#genre"/>
         <NamedIndividual IRI="#Love_Buzz"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
@@ -939,6 +1319,31 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Paper_Cuts"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Paper Cuts</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Platine"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Platine"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">3xPlatine</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#QuadrupleDiamant"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#QuadrupleDiamant"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">4xDiamant</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Racine_Carrée"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Racine Carrée</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dateArrivee"/>
@@ -1086,6 +1491,26 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Smells Like Teen Spirit</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#nationalite"/>
+        <NamedIndividual IRI="#Stromae"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">français</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
+        <NamedIndividual IRI="#Stromae"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/lastName"/>
+        <NamedIndividual IRI="#Stromae"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Stromae</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Stromae"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Stromae</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#genre"/>
         <NamedIndividual IRI="#Swap_Meet"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
@@ -1094,6 +1519,41 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Swap_Meet"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Swap Meet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Alain_Souchon_&amp;_Laurent_Voulzy"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Alain Souchon &amp; Laurent Voulzy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#recompenseNom"/>
+        <NamedIndividual IRI="#Album_de_L&apos;annee"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Victoires de la musique</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Album_de_L&apos;annee"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Album_de_L&apos;annee"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Album de l&apos;annee</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#recompenseNom"/>
+        <NamedIndividual IRI="#Album_de_la_chanson_de_l&apos;annee"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Victoires de la musique</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Album_de_la_chanson_de_l&apos;annee"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Album_de_la_chanson_de_l&apos;annee"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Album de la chanson de l&apos;annee</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
@@ -1183,11 +1643,23 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aReçu"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#chain_aMembre"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#chain_aReçu"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#chain_estMembre"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#chain_estReçu"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1253,6 +1725,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#chain_aMembre"/>
         <ObjectProperty IRI="#chain_estMembre"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#chain_aReçu"/>
+        <ObjectProperty IRI="#chain_estReçu"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#aChanson"/>
@@ -1295,8 +1771,16 @@
         <Class IRI="#GroupeDeMusique"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#chain_aReçu"/>
+        <Class IRI="#Musicien"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#chain_estMembre"/>
         <Class IRI="#Musicien"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#chain_estReçu"/>
+        <Class IRI="#Recompense"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#composePar"/>
@@ -1367,8 +1851,16 @@
         <Class IRI="#Musicien"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#chain_aReçu"/>
+        <Class IRI="#Recompense"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#chain_estMembre"/>
         <Class IRI="#GroupeDeMusique"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#chain_estReçu"/>
+        <Class IRI="#Musicien"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#composePar"/>
@@ -1407,15 +1899,25 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectPropertyChain>
+            <ObjectProperty IRI="#aParticipe"/>
+            <ObjectProperty IRI="#aReçu"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#chain_aReçu"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
             <ObjectProperty IRI="#estMembre"/>
             <ObjectProperty IRI="#estMembreRelation"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#chain_estMembre"/>
     </SubObjectPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#certifNom"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#estReçu"/>
+            <ObjectProperty IRI="#aParticipant"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#chain_estReçu"/>
+    </SubObjectPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#dateArrivee"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -1440,10 +1942,6 @@
         <DataProperty IRI="#dateArrivee"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
-        <DataProperty IRI="#certifNom"/>
-        <Class IRI="#CertificationDisque"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#dateArrivee"/>
         <Class IRI="#RelationAppartenance"/>
     </DataPropertyDomain>
@@ -1457,7 +1955,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#recompenseNom"/>
-        <Class IRI="#RecompenseCeremonie"/>
+        <Class IRI="#Recompense"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#role"/>
@@ -1467,10 +1965,6 @@
         <DataProperty IRI="#year"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
     </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#certifNom"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#dateArrivee"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
