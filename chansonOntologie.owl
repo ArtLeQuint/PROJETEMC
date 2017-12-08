@@ -432,10 +432,10 @@
             <Class IRI="#Musicien"/>
             <ObjectExactCardinality cardinality="0">
                 <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
-                <ObjectMaxCardinality cardinality="1">
+                <ObjectExactCardinality cardinality="1">
                     <ObjectProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
                     <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
-                </ObjectMaxCardinality>
+                </ObjectExactCardinality>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -473,14 +473,20 @@
             <ObjectAllValuesFrom>
                 <ObjectProperty IRI="http://xmlns.com/foaf/0.1/made"/>
                 <ObjectUnionOf>
-                    <DataHasValue>
-                        <DataProperty IRI="#genre"/>
-                        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Pop</Literal>
-                    </DataHasValue>
-                    <DataHasValue>
-                        <DataProperty IRI="#genre"/>
-                        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
-                    </DataHasValue>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#aGenre"/>
+                        <DataHasValue>
+                            <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+                            <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Pop</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#aGenre"/>
+                        <DataHasValue>
+                            <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+                            <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
                 </ObjectUnionOf>
             </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
@@ -499,17 +505,19 @@
         <Class IRI="#SoloSeulement"/>
         <ObjectIntersectionOf>
             <Class IRI="#Interprete"/>
-            <ObjectExactCardinality cardinality="0">
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#estMembre"/>
+                    <Class IRI="#RelationAppartenance"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <ObjectAllValuesFrom>
                 <ObjectProperty IRI="#aParticipe"/>
-                <ObjectMinCardinality cardinality="2">
+                <ObjectExactCardinality cardinality="1">
                     <ObjectProperty IRI="#aParticipant"/>
-                    <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
-                </ObjectMinCardinality>
-            </ObjectExactCardinality>
-            <ObjectExactCardinality cardinality="0">
-                <ObjectProperty IRI="#estMembre"/>
-                <Class IRI="#RelationAppartenance"/>
-            </ObjectExactCardinality>
+                    <Class IRI="#Disque"/>
+                </ObjectExactCardinality>
+            </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -613,6 +621,10 @@
         <Class IRI="#Chanson"/>
         <Class IRI="#Disque"/>
         <Class IRI="#Recompense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#JamaisSolo"/>
+        <Class IRI="#SoloSeulement"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Chanson"/>
