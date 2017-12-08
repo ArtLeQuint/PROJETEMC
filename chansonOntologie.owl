@@ -56,10 +56,10 @@
         <NamedIndividual IRI="#Garbage"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#genre"/>
+        <Class IRI="#RecompenseCeremonie"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RecompenseCeremonie"/>
+        <DataProperty IRI="#dateDepart"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#estMembre"/>
@@ -197,10 +197,10 @@
         <ObjectProperty IRI="#interpretePar"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#role"/>
+        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+        <DataProperty IRI="#role"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GroupeMixte"/>
@@ -1248,11 +1248,6 @@
         <NamedIndividual IRI="#RelationKurtNirvana"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#About_a_Girl"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#About_a_Girl"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">About a girl</Literal>
@@ -1313,11 +1308,6 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Bleach</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Blew"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Blew"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Blew</Literal>
@@ -1336,11 +1326,6 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Duke_Erikson"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Duke Erikson</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Floyd_The_Barber"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
@@ -1383,19 +1368,9 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Laurent Voulzy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Love_Buzz"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Love_Buzz"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Love Buzz</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Mr._Moustache"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
@@ -1403,19 +1378,9 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Mr. Moustache</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Negative_Creep"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Negative_Creep"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Negative_Creep</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Paper_Cuts"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
@@ -1548,19 +1513,9 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#School"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#School"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">School</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Scoff"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
@@ -1581,11 +1536,6 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Shirley_Manson"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Shirley Manson</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Sifting"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
@@ -1616,11 +1566,6 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Stromae"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Stromae</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#Swap_Meet"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rock</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
@@ -2054,7 +1999,7 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#genre"/>
+        <DataProperty IRI="#dateDepart"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -2077,8 +2022,8 @@
         <Class IRI="#RelationAppartenance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#genre"/>
-        <Class IRI="#Chanson"/>
+        <DataProperty IRI="#dateDepart"/>
+        <Class IRI="#RelationAppartenance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#nationalite"/>
@@ -2101,7 +2046,7 @@
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#genre"/>
+        <DataProperty IRI="#dateDepart"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
