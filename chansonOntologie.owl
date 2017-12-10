@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie">
-    <Prefix name="" IRI="http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -66,6 +66,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RelationKristNirvana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Billy_Crawford"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RelationDukeGarbae"/>
@@ -144,6 +147,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DisqueRecompense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Claudio_Capéo"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#aGenre"/>
@@ -646,6 +652,10 @@
         <NamedIndividual IRI="#ArtisteInterpreteMasculinAnnée"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="#Billy_Crawford"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Disque"/>
         <NamedIndividual IRI="#Bleach"/>
     </ClassAssertion>
@@ -656,6 +666,10 @@
     <ClassAssertion>
         <Class IRI="#Chanson"/>
         <NamedIndividual IRI="#ChansonSansGenre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Musicien"/>
+        <NamedIndividual IRI="#Claudio_Capéo"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Musicien"/>
@@ -927,6 +941,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#aParticipant"/>
         <NamedIndividual IRI="#Bleach"/>
+        <NamedIndividual IRI="#Nirvana"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aParticipant"/>
+        <NamedIndividual IRI="#Bleach"/>
         <NamedIndividual IRI="https://fr.wikipedia.org/wiki/Aaron_Burckhard"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -968,6 +987,11 @@
         <ObjectProperty IRI="#aChanson"/>
         <NamedIndividual IRI="#In_Utero"/>
         <NamedIndividual IRI="#Smells_Like_Teen_Spirits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aParticipant"/>
+        <NamedIndividual IRI="#In_Utero"/>
+        <NamedIndividual IRI="#Nirvana"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#aParticipant"/>
@@ -1310,6 +1334,21 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Artiste Interprete Masculin de l&apos;année</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
+        <NamedIndividual IRI="#Billy_Crawford"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/lastName"/>
+        <NamedIndividual IRI="#Billy_Crawford"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Crawford</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Billy_Crawford"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Billy Crawford</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#Bleach"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Bleach</Literal>
@@ -1323,6 +1362,21 @@
         <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <NamedIndividual IRI="#ChansonSansGenre"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NoGenre</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
+        <NamedIndividual IRI="#Claudio_Capéo"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/lastName"/>
+        <NamedIndividual IRI="#Claudio_Capéo"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Capéo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <NamedIndividual IRI="#Claudio_Capéo"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Claudio Capéo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/gender"/>
