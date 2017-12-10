@@ -79,24 +79,97 @@
 	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
 	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-	SELECT ?chanson
+	SELECT (str(?name) as ?chansonSansGenre)
 	WHERE {
 		?chanson a moi:Chanson;
-		moi:aGenre ?genre.
+		foaf:name ?name.
+		OPTIONAL { ?genre moi:estGenre ?chanson }.
 		FILTER(!bound(?genre))		
 	}
 
 
 #6. Noms des récompenses reçues par des musiciens en 2014 (prix et disque de certification) et nom du musicien ou groupe.
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
+	SELECT (str(?nomRecFULL) as ?recompense ) (str(?artGroupeName) as ?artisteOuGroupe)
+	WHERE {
+		?a a moi:Recompense;
+		moi:chain_estReçu ?b;
+		moi:year '2014';
+		foaf:name ?nomRecFULL.
+		?b foaf:name ?artGroupeName
+	}
 
 #7. Noms des groupes qui ont fait moins de 4 disques et nombre de ces disques. 
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+	SELECT ?nameFULL (count(?disk) as ?nbDisk)
+	WHERE {
+		?groupe a foaf:Group;
+		foaf:name ?nameFULL.
+		OPTIONAL {
+			?disk a moi:Disque.
+			?groupe moi:aParticipe ?disk.
+		}
+	} 
+	GROUP BY ?nameFULL
 
 
 #8. Tous les noms de famille de musiciens commençant par c (ou C), triés par ordre alphabétique.
 #(vous pouvez regarder les expressions régulières https://www.w3.org/TR/rdf-sparql-query/)
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
+	SELECT (str(?lastName) as ?Nom)
+	WHERE { ?musicien a moi:Musicien;
+		foaf:lastName ?lastName
+		FILTER (regex(str( ?lastName) , "^C" ) || regex(str(?lastName) , "^c") )
+	}
+	ORDER BY ?lastName
 
 #9. Pour les musiciens membres de groupes, nom du groupe et du musicien.
-#10. Nombre de fois où des femmes jouent dans un (ou des) groupe(s).
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
+	SELECT ?nameFULL (count(?disk) as ?nbDisk)
+	WHERE {
+		?groupe a foaf:Group;
+		foaf:name ?nameFULL.
+		OPTIONAL {
+			?disk a moi:Disque.
+			?groupe moi:aParticipe ?disk.
+		}
+	} 
+	GROUP BY ?nameFULL
+
+#10. Nombre de fois où des femmes jouent dans un (ou des) groupe(s).
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+	SELECT (count(?femme) as ?NbFoisFemmeJoue)
+	WHERE{
+		?femme moi:chain_estMembre ?group;
+		foaf:gender 'female'
+	}
