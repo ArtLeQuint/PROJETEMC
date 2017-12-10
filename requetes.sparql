@@ -2,34 +2,89 @@
 #		Liste des requetes !
 #######################################
 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 #1.Titres  de  chansons,  nom  du  musicien  ou  du  groupe  et  genres  
 #de  ces  chansons  (la  chanson apparaît y compris lorsqu'il n'y a pas de genre associé à la chanson).
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-
+	SELECT (str(?titreFULL) as ?titre ) (str(?creatorNameFULL) as ?CreatorName)  (str(?genreNameFULL) as ?genreName)
+	WHERE { 
+		?chanson a moi:Chanson;
+		foaf:name ?titreFULL;
+		foaf:maker ?createur;
+		moi:aGenre ?genre.
+		?createur foaf:name ?creatorNameFULL.
+		?genre foaf:name ?genreNameFULL
+	}
+	
+	
 #2.Sur quel disque de Nirvana se trouve la chanson Smells Like Teen Spirit ?
-SELECT ?name
-WHERE { ?disc a moi:Disque;
-		foaf:name ?name ;
-		moi:aChanson moi:Smells_Like_Teen_Spirits }
-		
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+	SELECT (str(?nameFULL) as ?name)
+	WHERE { 
+		?disc a moi:Disque;
+		foaf:name ?nameFULL ;
+		moi:aChanson moi:Smells_Like_Teen_Spirits 
+	}
+
+	
 #3.Y a-t-il une femme dans le groupe Garbage ?
-SELECT ?gender
-WHERE {	moi:Nirvana moi:chain_aMembre ?membre.
-	?membre foaf:gender ?gender.
-	FILTER( regex(str(?gender) = 'female' ))
-}
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+	SELECT (str(?nomFULL) as ?name)
+	WHERE {	
+		moi:Garbage moi:chain_aMembre ?membre.
+		?membre foaf:gender 'female';
+		foaf:name ?nomFULL 
+	}
+
 
 #4.Combien y a-t-il de chansons sur les différents disques de Nirvana ? 
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
+	SELECT ?disknameFULL (count(distinct ?song) as ?chansons) 
+	WHERE { 
+		?song  moi:estChanson ?disk. 
+		?disk a moi:Disque;
+		foaf:name ?disknameFULL
+	} 
+	GROUP BY ?disknameFULL
+	
 
 #5.Titres des chansons dont on ne connaît pas le genre.
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX moi: <http://www.semanticweb.org/florian/ontologies/2017/10/chansonOntologie#>
+	PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+	SELECT ?chanson
+	WHERE {
+		?chanson a moi:Chanson;
+		moi:aGenre ?genre.
+		FILTER(!bound(?genre))		
+	}
 
 
 #6. Noms des récompenses reçues par des musiciens en 2014 (prix et disque de certification) et nom du musicien ou groupe.
